@@ -1,18 +1,26 @@
-for (let i = 0; i < buttons.lenght; i++) {
-    if (joueur === robot) {
-        result = "Egalité"
-    } else if (joueur == "pierre" && robot == "ciseaux") {
-        result = "Gagner"
-    } else if (joueur == "ciseaux" && robot == "papier") {
-        result = "Gagner"
-    } else if (joueur == "papier" && robot == "pierre") {
-        result = "Gagner"
+let choixUser = ""
+let choixRobot = ["Pierre", "Ciseaux", "Feuille"]
+
+function getChoice(choix) {
+    choixUser = choix
+    console.log(choixUser)
+    jeux()
+}
+
+
+function jeux() {
+    choixUser
+    robot = choixRobot[Math.floor(Math.random() * choixRobot.length)]
+    
+    if (choixUser === robot) {
+        resultat = "Egalité"
     }
-    else if (joueur == "ciseaux" && robot == "pierre") {
-        result = "perdu"
-    } else if (joueur == "papier" && robot == "ciseaux") {
-        result = "perdu"
-    } else if (joueur == "pierre" && robot == "papier") {
-        result = "perdu"
+    else if ((choixUser === 'Pierre' && robot === 'Ciseaux') || (choixUser === 'Ciseaux' && robot === 'Feuille') || (choixUser === 'Feuille') && (robot === 'Pierre')) {
+        resultat = "Gagné"
     }
+    else {
+        resultat = "Perdu"
+    }
+
+    console.log(resultat)
 }
