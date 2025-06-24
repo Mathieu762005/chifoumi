@@ -1,3 +1,24 @@
 body {
     height: 100vh;
+    background-image: url(img/test.PNG);
+    background-size: cover;
+    background-position: center;
+}
+
+main {
+    width: 90%;
+}
+
+.persoUn {
+    background-image: url(img/background-perso.PNG);
+
+}
+
+#ecran {
+    background-color: black;
+}
+
+.persoDeux {
+    background-image: url(img/background-perso.PNG);
+
 }
