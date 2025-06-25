@@ -27,19 +27,27 @@ function jeux() {
         document.getElementById("ecran").innerHTML = `<video autoplay id="attaquerouge" src="video/attaquerouge.mp4" width="1400"></video>`
         pointRobot++;
         setTimeout(() => {
-            document.getElementById("ecran").innerText = "manche gagner" + " " + pointRobot
+            document.getElementById("ecran").innerText = "manche gagner :" + " " + pointRobot
         }, 13000);
         setTimeout(() => {
             document.getElementById("ecran").innerHTML = `<video muted autoplay loop src="video/combat.mp4" width="1400"></video>`
         }, 16000);
-    } else {
+    } else if (resultat == "Perdu") {
         document.getElementById("ecran").innerHTML = `<video autoplay id="attaqueblanc" src="video/attaqueblanc .mp4" width="1400"></video>`
         pointUser++
         setTimeout(() => {
-            document.getElementById("ecran").innerText = "manche gagner" + " " + pointUser
+            document.getElementById("ecran").innerText = "manche gagner :" + " " + pointUser
         }, 6500);
         setTimeout(() => {
             document.getElementById("ecran").innerHTML = `<video muted autoplay loop src="video/combat.mp4" width="1400"></video>`
         }, 9500);
+    } else {
+        document.getElementById("ecran").innerHTML = `<video autoplay id="attaqueblanc" src="video/egalité.mp4" width="1400"></video>`
+        setTimeout(() => {
+            document.getElementById("ecran").innerText = "manche : " + "égalité"
+        }, 9000);
+        setTimeout(() => {
+            document.getElementById("ecran").innerHTML = `<video muted autoplay loop src="video/combat.mp4" width="1400"></video>`
+        }, 11000);
     }
 }
