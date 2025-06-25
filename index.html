@@ -10,28 +10,87 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="d-flex align-items-center">
+<body class="d-flex justify-content-center flex-column">
     <main class=" d-flex mx-auto">
         <div class="card persoUn" style="width: 18rem;">
             <img src="img/perso1.png" class="card-img-top" alt="...">
             <div class="card-body text-center">
-                <button class="rounded-5" onclick="getChoice('coup de pied')"><img class="rounded-5" src="img/coup de pied.PNG" width="50" alt=""></button>
-                <button class="rounded-5 mx-3" onclick="getChoice('sagesse')"><img class="rounded-5" src="img/sagesse.PNG" width="50" alt=""></button>
-                <button class="rounded-5" onclick="getChoice('atomisation')"><img class="rounded-5" src="img/atomisation.PNG" width="50" alt=""></button>
+                <button class="rounded-3" onclick="getChoice('coup de pied')"><img class="rounded-3"
+                        src="img/coup de pied.PNG" width="50" alt=""></button>
+                <button class="rounded-3 mx-3" onclick="getChoice('sagesse')"><img class="rounded-3"
+                        src="img/sagesse.PNG" width="50" alt=""></button>
+                <button class="rounded-3" onclick="getChoice('atomisation')"><img class="rounded-3"
+                        src="img/atomisation.PNG" width="50" alt=""></button>
             </div>
         </div>
-        <div class="container text-center h1 p-0 mx-auto" id="ecran">
+        <div class="container text-center fs-1 d-flex align-items-center justify-content-center h1 p-0 mx-auto" id="ecran">
             <video muted autoplay loop src="video/combat.mp4" width="1400"></video>
         </div>
         <div class="card persoDeux" style="width: 18rem;">
             <img src="img/perso2.png" class="card-img-top" alt="...">
             <div class="card-body text-center">
-                <button class="btn-1 rounded-5"><img class="rounded-5" src="img/hache.PNG" width="50" alt=""></button>
-                <button class="rounded-5 mx-3"><img class="rounded-5" src="img/epee.png" width="50" alt=""></button>
-                <button class="rounded-5"><img class="rounded-5" src="img/guerrier.PNG" width="50" alt=""></button>
+                <button class="btn-1 rounded-3"><img class="rounded-3" src="img/hache.PNG" width="50" alt=""></button>
+                <button class="rounded-3 mx-3"><img class="rounded-3" src="img/epee.png" width="50" alt=""></button>
+                <button class="rounded-3"><img class="rounded-3" src="img/guerrier.PNG" width="50" alt=""></button>
             </div>
         </div>
     </main>
+    <footer class="footer rounded-3 text-black border mx-auto mt-3 bg-white d-flex flex-column align-items-center">
+        <button type="button" class="reglement btn text-white fw-bold my-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            réglementation
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">réglementation</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="modal-dialog modal-dialog-scrollable">
+                            <div class="d-flex align-items-center mb-2">
+                                <img class="rounded-5" src="img/coup de pied.PNG" width="50" alt="">
+                                <p class="m-0 fs-4 mx-2">></p>
+                                <img class="rounded-5" src="img/epee.png" width="50" alt="">
+                            </div>
+                            <div class="d-flex align-items-center mb-2">
+                                <img class="rounded-5" src="img/sagesse.PNG" width="50" alt="">
+                                <p class="m-0 fs-4 mx-2">></p>
+                                <img class="rounded-5" src="img/guerrier.PNG" width="50" alt="">
+                            </div>
+                            <div class="d-flex align-items-center mb-2">
+                                <img class="rounded-5" src="img/atomisation.PNG" width="50" alt="">
+                                <p class="m-0 fs-4 mx-2">></p>
+                                <img class="rounded-5" src="img/hache.PNG" width="50" alt="">
+                            </div>
+                            <hr>
+                            <div class="d-flex align-items-center mb-2">
+                                <img class="rounded-5" src="img/epee.png" width="50" alt="">
+                                <p class="m-0 fs-4 mx-2">></p>
+                                <img class="rounded-5" src="img/atomisation.PNG" width="50" alt="">
+                            </div>
+                            <div class="d-flex align-items-center mb-2">
+                                <img class="rounded-5" src="img/hache.PNG" width="50" alt="">
+                                <p class="m-0 fs-4 mx-2">></p>
+                                <img class="rounded-5" src="img/sagesse.PNG" width="50" alt="">
+                            </div>
+                            <div class="d-flex align-items-center mb-2">
+                                <img class="rounded-5" src="img/guerrier.PNG" width="50" alt="">
+                                <p class="m-0 fs-4 mx-2">></p>
+                                <img class="rounded-5" src="img/coup de pied.PNG" width="50" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
 

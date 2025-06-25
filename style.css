@@ -31,3 +31,12 @@ main {
     background-size: cover;
     background-position: center;
 }
+
+.footer {
+    width: 97.6%;
+    background-image: url(img/background-perso.PNG);
+}
+
+.reglement {
+    background-color: rgb(160, 36, 36);
+}

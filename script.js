@@ -1,5 +1,7 @@
 let choixUser = ""
 let choixRobot = ["coup de pied", "sagesse", "atomisation"]
+let pointRobot = 0
+let pointUser = 0
 
 function getChoice(choix) {
     choixUser = choix
@@ -23,13 +25,21 @@ function jeux() {
 
     if (resultat == "Gagné") {
         document.getElementById("ecran").innerHTML = `<video autoplay id="attaquerouge" src="video/attaquerouge.mp4" width="1400"></video>`
+        pointRobot++;
+        setTimeout(() => {
+            document.getElementById("ecran").innerText = "manche gagner" + " " + pointRobot
+        }, 13000);
         setTimeout(() => {
             document.getElementById("ecran").innerHTML = `<video muted autoplay loop src="video/combat.mp4" width="1400"></video>`
-        }, 1000);
+        }, 16000);
     } else {
         document.getElementById("ecran").innerHTML = `<video autoplay id="attaqueblanc" src="video/attaqueblanc .mp4" width="1400"></video>`
+        pointUser++
+        setTimeout(() => {
+            document.getElementById("ecran").innerText = "manche gagner" + " " + pointUser
+        }, 6500);
         setTimeout(() => {
             document.getElementById("ecran").innerHTML = `<video muted autoplay loop src="video/combat.mp4" width="1400"></video>`
-        }, 1000);
+        }, 9500);
     }
 }
