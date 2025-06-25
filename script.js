@@ -7,7 +7,6 @@ function getChoice(choix) {
     jeux()
 }
 
-
 function jeux() {
     choixUser
     robot = choixRobot[Math.floor(Math.random() * choixRobot.length)]
@@ -22,29 +21,15 @@ function jeux() {
         resultat = "Perdu"
     }
 
-    setTimeout(() => {
-        document.getElementById("ecran").textContent = "attention !"
-    }, "0000")
-    setTimeout(() => {
-        document.getElementById("ecran").textContent = "attention !!"
-    }, "500")
-    setTimeout(() => {
-        document.getElementById("ecran").textContent = "attention !!!"
-    }, "1000")
-    setTimeout(() => {
-        document.getElementById("ecran").textContent = "attention !"
-    }, "1500")
-    setTimeout(() => {
-        document.getElementById("ecran").textContent = "attention !!"
-    }, "2000")
-    setTimeout(() => {
-        document.getElementById("ecran").textContent = "attention !!!"
-    }, "2500")
-    setTimeout(() => {
-        if (resultat == "Gagné") {
-            document.getElementById("ecran").innerHTML = `<video autoplay id="attaquerouge" src="video/attaquerouge.mp4" width="1000"></video>`
-        } else {
-            document.getElementById("ecran").innerHTML = `<video autoplay id="attaqueblanc" src="video/attaqueblanc.mp4" width="1000"></video>`
-        }
-    }, "3000")
+    if (resultat == "Gagné") {
+        document.getElementById("ecran").innerHTML = `<video autoplay id="attaquerouge" src="video/attaquerouge.mp4" width="1400"></video>`
+        setTimeout(() => {
+            document.getElementById("ecran").innerHTML = `<video muted autoplay loop src="video/combat.mp4" width="1400"></video>`
+        }, 1000);
+    } else {
+        document.getElementById("ecran").innerHTML = `<video autoplay id="attaqueblanc" src="video/attaqueblanc .mp4" width="1400"></video>`
+        setTimeout(() => {
+            document.getElementById("ecran").innerHTML = `<video muted autoplay loop src="video/combat.mp4" width="1400"></video>`
+        }, 1000);
+    }
 }

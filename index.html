@@ -10,21 +10,26 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="d-flex align-items-center border">
+<body class="d-flex align-items-center">
     <main class=" d-flex mx-auto">
-        <div class="persoUn container border text-center p-3">
-            <img src="img/perso1.PNG" class="img-fluid" alt="">
-            <button onclick="getChoice('coup de pied')">coup de pied</button>
-            <button onclick="getChoice('sagesse')">sagesse</button>
-            <button onclick="getChoice('atomisation')">atomisation</button>
+        <div class="card persoUn" style="width: 18rem;">
+            <img src="img/perso1.png" class="card-img-top" alt="...">
+            <div class="card-body text-center">
+                <button class="rounded-5" onclick="getChoice('coup de pied')"><img class="rounded-5" src="img/coup de pied.PNG" width="50" alt=""></button>
+                <button class="rounded-5 mx-3" onclick="getChoice('sagesse')"><img class="rounded-5" src="img/sagesse.PNG" width="50" alt=""></button>
+                <button class="rounded-5" onclick="getChoice('atomisation')"><img class="rounded-5" src="img/atomisation.PNG" width="50" alt=""></button>
+            </div>
         </div>
-        <div class="container border text-center h1 text-white p-0 mx-auto" id="ecran">
+        <div class="container text-center h1 p-0 mx-auto" id="ecran">
+            <video muted autoplay loop src="video/combat.mp4" width="1400"></video>
         </div>
-        <div class="persoDeux container border text-center p-3">
-            <img src="img/perso2.PNG" class="img-fluid" alt="">
-            <button>Pierre</button>
-            <button>Feuille</button>
-            <button>Ciseaux</button>
+        <div class="card persoDeux" style="width: 18rem;">
+            <img src="img/perso2.png" class="card-img-top" alt="...">
+            <div class="card-body text-center">
+                <button class="btn-1 rounded-5"><img class="rounded-5" src="img/hache.PNG" width="50" alt=""></button>
+                <button class="rounded-5 mx-3"><img class="rounded-5" src="img/epee.png" width="50" alt=""></button>
+                <button class="rounded-5"><img class="rounded-5" src="img/guerrier.PNG" width="50" alt=""></button>
+            </div>
         </div>
     </main>
     <script src="script.js"></script>

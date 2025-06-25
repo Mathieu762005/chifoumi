@@ -1,3 +1,8 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
 body {
     height: 100vh;
     background-image: url(img/test.PNG);
@@ -6,19 +11,23 @@ body {
 }
 
 main {
-    width: 90%;
+    height: 80%;
 }
 
 .persoUn {
     background-image: url(img/background-perso.PNG);
-
+    background-size: cover;
+    background-position: center;
 }
 
 #ecran {
-    background-color: black;
+    background-color: rgb(255, 255, 255);
+    width: 1300px;
+    margin: 0px;
 }
 
 .persoDeux {
     background-image: url(img/background-perso.PNG);
-
+    background-size: cover;
+    background-position: center;
 }
