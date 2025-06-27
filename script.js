@@ -3,6 +3,9 @@ let choixRobot = ["coup de pied", "sagesse", "atomisation"]
 let pointRobot = 0
 let pointUser = 0
 
+document.getElementById("ecranRobot").innerText = "Manche gagné : 0"
+document.getElementById("ecranUser").innerText = "Manche gagné : 0"
+
 function getChoice(choix) {
     choixUser = choix
     console.log(choixUser)
@@ -28,6 +31,7 @@ function jeux() {
         pointRobot++;
         setTimeout(() => {
             document.getElementById("ecran").innerText = "manche gagner :" + " " + pointRobot
+            document.getElementById("ecranRobot").innerText = "Manche gagné : " + pointRobot
         }, 13000);
         setTimeout(() => {
             document.getElementById("ecran").innerHTML = `<video muted autoplay loop src="video/combat.mp4" width="1400"></video>`
@@ -37,6 +41,7 @@ function jeux() {
         pointUser++
         setTimeout(() => {
             document.getElementById("ecran").innerText = "manche gagner :" + " " + pointUser
+            document.getElementById("ecranUser").innerText = "Manche gagné : " + pointUser
         }, 6500);
         setTimeout(() => {
             document.getElementById("ecran").innerHTML = `<video muted autoplay loop src="video/combat.mp4" width="1400"></video>`

@@ -40,3 +40,15 @@ main {
 .reglement {
     background-color: rgb(160, 36, 36);
 }
+
+.point {
+    min-height: 5rem;
+}
+
+#ecranUser {
+    background-color: rgb(160, 36, 36);
+}
+
+#ecranRobot {
+    background-color: rgb(160, 36, 36);
+}
